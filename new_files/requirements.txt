@@ -1,0 +1,10 @@
+flask==2.3.3
+flask-swagger==0.2.14
+flask-swagger-ui==5.21.0
+flask-cors==6.0.1
+python-dotenv==1.0.0
+google-genai==1.29.0
+redis==5.0.1
+pillow==11.3.0
+librosa==0.11.0
+numpy==2.2.6
