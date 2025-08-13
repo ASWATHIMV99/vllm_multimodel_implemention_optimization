@@ -8,7 +8,8 @@ from unittest.mock import patch, MagicMock
 from io import BytesIO
 
 # Add the current directory to the path so we can import app
-sys.path.insert(0, 'D:\\GEN_AI_PRO\\vllm_multimodel_implemention_optimization\\new_files')
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
 
 class TestApp(unittest.TestCase):
     
@@ -27,8 +28,8 @@ class TestApp(unittest.TestCase):
     
     def test_env_api_key_configured(self):
         """Test that the API key is properly configured in .env file"""
-        # Check if .env file exists
-        env_path = 'D:\\GEN_AI_PRO\\vllm_multimodel_implemention_optimization\\new_files\\.env'
+        # Check if .env file exists in current directory
+        env_path = os.path.join(current_dir, '.env')
         self.assertTrue(os.path.exists(env_path), "The .env file does not exist")
         
         # Check if API key is set in environment variables
